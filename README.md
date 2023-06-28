@@ -2,7 +2,7 @@
 
 ```
 -g npm-check-update nodemon 
-dotenv express mongoose ejs validator bcrypt  cookie-parser
+dotenv express mongoose validator bcrypt  cookie-parser
 ```
 
 <h3>MongoDB Configure</h3>

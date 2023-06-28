@@ -18,9 +18,6 @@ app.use(express.json());
 // cookie parser
 app.use(cookieParser());
 
-// view engine
-app.set('view engine', 'ejs');
-
 // database connection
 // Add database URI on .env file
 // dbURI = YourDatabaseURI
