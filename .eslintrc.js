@@ -23,6 +23,8 @@ module.exports = {
         "react/jsx-props-no-spreading": "off",
         "quotes": ["error", "single"],
         "semi": ["error", "always"],
+        "no-underscore-dangle": "off",
+        "jsx-aly/label-has-associated-control": "off",
     // we use 2 spaces to indent our code
         "indent": ["error", 2],
     // we want to avoid extraneous spaces
