@@ -87,7 +87,7 @@ export default function EditProfile() {
                             })} />
                         </div>
                         <div className="pt-30">
-                            <Input label="Email Address" disabled value={user.email} />
+                            <Input label="Email Address" value={user.email} />
                         </div>
                         {/* <div className="pt-30">
                             <Input label="Phone" title="Enter your phone number" />
