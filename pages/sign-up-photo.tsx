@@ -9,7 +9,7 @@ export default function SignUpPhoto() {
     const [categories, setCategories] = useState([]);
     const [favorite, setFavorite] = useState('');
     const [image, setImage] = useState('');
-    const [imagePreview, setImagePreview] = useState(null);
+    const [imagePreview, setImagePreview] = useState('');
     const [localForm, setLocalForm] =useState({
         name: '',
         email: '',
@@ -69,7 +69,7 @@ export default function SignUpPhoto() {
                                     {imagePreview ? <img src={imagePreview} className="img-upload" alt="upload"/> : <Image src='/icon/upload.svg' width={120} height={120} alt="upload"/>}
                                 </label>
                                 <input id="avatar" type="file" name="avatar" accept="image/png, image/jpeg" onChange={(event) => {
-                                    const img = event.target.files[0];
+                                    const img = event.target.files[0]?;
                                     setImagePreview(URL.createObjectURL(img));
                                     return setImage(img);
                                 }} />

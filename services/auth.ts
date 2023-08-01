@@ -5,10 +5,11 @@ import callAPI from "@/config/api";
 
 const ROOT_API = process.env.NEXT_PUBLIC_API;
 const API_VERSION = 'api';
+const BASEURL = 'http://y-ne.cloud';
 
 export async function setSignUp(data: FormData){
     
-    const url = `${ROOT_API}/${API_VERSION}/auth/signup`;
+    const url = `${BASEURL}/${API_VERSION}/auth/signup`;
 
     return callAPI({
         url,
@@ -18,7 +19,7 @@ export async function setSignUp(data: FormData){
 }
 
 export async function setLogin(data: LoginTypes){
-    const url = `${ROOT_API}/${API_VERSION}/auth/signin`;
+    const url = `${BASEURL}/${API_VERSION}/auth/signin`;
 
     return callAPI({
         url,

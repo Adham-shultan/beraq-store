@@ -17,7 +17,7 @@ export default function EditProfile() {
         avatar: '',
     });
 
-    const [imagePreview, setImagePreview] = useState(null);
+    const [imagePreview, setImagePreview] = useState('');
     const router = useRouter();
 
     useEffect(() => {
@@ -69,7 +69,7 @@ export default function EditProfile() {
                                 name="avatar" 
                                 accept="image/png, image/jpeg"
                                 onChange={(event) => {
-                                    const img = event.target.files[0];
+                                    const img = event.target.files[0]?;
                                     setImagePreview(URL.createObjectURL(img));
                                     return setUser({
                                         ...user,
@@ -87,7 +87,12 @@ export default function EditProfile() {
                             })} />
                         </div>
                         <div className="pt-30">
-                            <Input label="Email Address" value={user.email} />
+                            <Input label="Email Address" 
+                            value={user.email} 
+                            onChange={(event) => setUser({
+                                ...user,
+                                email: event.target.value,
+                            })} />
                         </div>
                         {/* <div className="pt-30">
                             <Input label="Phone" title="Enter your phone number" />

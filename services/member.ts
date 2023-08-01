@@ -2,9 +2,10 @@ import callAPI from "@/config/api";
 
 const ROOT_API = process.env.NEXT_PUBLIC_API;
 const API_VERSION = 'api';
+const BASEURL = 'http://y-ne.cloud';
 
 export async function getMemberOverview(){
-    const url = `${ROOT_API}/${API_VERSION}/players/dashboard`;
+    const url = `${BASEURL}/${API_VERSION}/players/dashboard`;
 
     return callAPI({
         url,
@@ -20,7 +21,7 @@ export  async function getMemberTransactions(valueParams: string) {
     } else {
         params = `?status=${valueParams}`;
     }
-    const url = `${ROOT_API}/${API_VERSION}/players/history${params}`;
+    const url = `${BASEURL}/${API_VERSION}/players/history${params}`;
 
     return callAPI({
         url,
@@ -30,7 +31,7 @@ export  async function getMemberTransactions(valueParams: string) {
 }
 
 export  async function getTransactionDetail(id: string, token: string) {
-    const url = `${ROOT_API}/${API_VERSION}/players/history/${id}/detail`;
+    const url = `${BASEURL}/${API_VERSION}/players/history/${id}/detail`;
 
     return callAPI({
         url,
@@ -40,7 +41,7 @@ export  async function getTransactionDetail(id: string, token: string) {
 }
 
 export  async function updateProfile(data: FormData, id: string) {
-    const url = `${ROOT_API}/${API_VERSION}/players/profile/${id}`;
+    const url = `${BASEURL}/${API_VERSION}/players/profile/${id}`;
 
     return callAPI({
         url,

@@ -15,7 +15,8 @@ export default function FeaturedGame() {
     getFeaturedGameList();
   }, []);
 
-  const API_IMG = process.env.NEXT_PUBLIC_IMG;
+  const BASEURL = 'http://y-ne.cloud';
+  const API_IMG = 'uploads';
   return (
     <section className="featured-game pt-50 pb-50">
         <div className="container-fluid">
@@ -28,7 +29,7 @@ export default function FeaturedGame() {
                       key={item._id} 
                       title={item.name} 
                       category={item.category.name} 
-                      thumbnail={`${API_IMG}/${item.thumbnail}`} 
+                      thumbnail={`${BASEURL}/${API_IMG}/${item.thumbnail}`} 
                       id={item._id}
                       />
                       ))}
